@@ -109,6 +109,10 @@ while True:
 `AI`: I don't know, could you please provide more information or specify which country you are referring to?
 
 
+### Demo
+<a href="https://huggingface.co/spaces/Ganesh-Kunnamkumarath/RAG-Chatbot-Basics" target="_blank"> Demo link </a><br />
+Note: API key would have updated.
+
 ## 3. Mini-Exercise & Practical Deployment
 
 ### 🔹 Exercise:
