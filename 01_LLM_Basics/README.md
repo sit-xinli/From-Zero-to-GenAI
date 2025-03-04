@@ -74,7 +74,9 @@ while True:
 - If the user types `exit` or `quit`, the chatbot stops.
 - Otherwise, it processes the user’s message and prints the AI’s response.
 
-
+### Demo link
+<a href="https://huggingface.co/spaces/Ganesh-Kunnamkumarath/01_LLM_Basics" target="_blank">1_LLM_Basics</a> <br />
+Note: API key would have been updated.
 
 
 ### 📌 Testing
