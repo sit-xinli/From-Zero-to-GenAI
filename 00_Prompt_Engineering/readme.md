@@ -28,6 +28,12 @@ This module explores four key techniques:
 
 ---
 
+## Demo
+<a href="https://huggingface.co/spaces/Ganesh-Kunnamkumarath/Prompt_Engineering" target="_blank">
+Demo on Hugging face spaces
+</a>
+
+
 ## 📂 Folder Structure
 
 ```
