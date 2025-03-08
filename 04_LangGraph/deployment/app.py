@@ -69,6 +69,10 @@ app = workflow.compile()
 # ✅ Streamlit UI
 st.title("🚀 AI Chatbot with Decision Flow!")
 
+
+st.write("Sample Queries: `How is the weather in Bangalore today`, `Whats the latest news on technology?`")
+st.write("Sample Queries: `What is the capital of France?`, `Tell me a joke!`")
+
 # Initialize session state
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [SystemMessage(content="You are an AI assistant.")]
