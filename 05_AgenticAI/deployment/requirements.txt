@@ -1,0 +1,7 @@
+openai
+langchain
+langgraph
+streamlit
+wikipedia
+langchain_openai
+langchain_community
