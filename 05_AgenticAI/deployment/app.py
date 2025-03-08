@@ -100,3 +100,4 @@ if st.button("Send"):
                         tool_name = tool_call.tool
                         tool_input = tool_call.tool_input
                         st.markdown(f"**> Invoking: `{tool_name}` with `{tool_input}`**")
+

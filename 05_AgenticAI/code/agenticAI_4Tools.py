@@ -43,7 +43,6 @@ python_executor = Tool(
 )
 
 
-
 # 🔥 Add all tools
 tools = [search_tool, wiki_tool, math_tool, python_executor]
 
