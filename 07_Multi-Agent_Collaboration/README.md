@@ -31,6 +31,10 @@ The provided Python script creates a **multi-agent research assistant** using La
   - `report_generator` - Generates a final report combining insights and fact-checks.
 - **LangGraph Workflow** - Defines how agents communicate and execute tasks in sequence.
 
+## Demo
+<a href="https://huggingface.co/spaces/Ganesh-Kunnamkumarath/AgenticAI__Multi-Agent-Collaboration" target="_blank">Demo on Hugging face</a><br />
+Note: API key would be changed
+
 ## Installation & Setup ⚙️
 
 ### Prerequisites
