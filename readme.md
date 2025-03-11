@@ -53,7 +53,7 @@ Before you begin, ensure you have the following installed:
 Clone the repo:  
 
 ```bash
-git clone https://github.com/your-username/From-Zero-to-GenAI.git
+git clone https://github.com/Ganesh-Kunnamkumarath/From-Zero-to-GenAI.git
 cd From-Zero-to-GenAI
 ```
 
