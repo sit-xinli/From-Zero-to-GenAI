@@ -50,26 +50,11 @@ print("------ 🤖🔧 **Data Augmentation - Text Variations** ------\n")
 # Generating paraphrased variations of sentences.
 original_sentences = ["The weather is great today.", "It's a sunny day."]
 augmented_data = [
-    llm.invoke([{"role": "user", "content": f"Paraphrase: {sentence}"}]).content 
+    llm.invoke([{"role": "user", "content": f"Paraphrase: {sentence}"}]).content
     for sentence in original_sentences
 ]
 print(f"Augmented Data: {augmented_data}\n")
 print("------ 🤖🔧 **Data Augmentation - Text Variations** ------\n")
-
-
-
-
-# ───────────────────────────────────────────
-# 📊✍️ **Evaluation - Summary Quality**
-# ───────────────────────────────────────────
-print("------ 🤖🔧 **Evaluation - Summary Quality** ------\n")
-# Evaluating the quality of a generated summary.
-document = "LangChain is a powerful library for building applications using language models."
-summary = llm.invoke([{"role": "user", "content": f"Summarize: {document}"}]).content
-evaluation = f"Summary Quality: {'Good' if len(summary.split()) < 30 else 'Needs improvement'}"
-print(f"Evaluation: {evaluation}\n")
-print("------ 🤖🔧 **Evaluation - Summary Quality** ------\n")
-
 
 
 
@@ -101,7 +86,7 @@ print("------ 🤖🔧 **Webhooks and Event Handling** ------\n")
 print("Streaming Model Response: ", end="", flush=True)
 for token in llm.stream([{"role": "user", "content": "Tell me a joke"}]):
     print(f"{token.content}", end="", flush=True)  # Continue printing tokens on the same line
-    time.sleep(0.3)
+    time.sleep(0.5)
 
 print("\n\n------ 🤖🔧 **End of Streaming - Real-time Model Output** ------\n")
 

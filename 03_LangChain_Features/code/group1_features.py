@@ -35,32 +35,6 @@ print("----------------🧩 Chaining & Prompt Templates ----------------\n")
 
 
 
-
-
-
-
-# ───────────────────────────────────────────
-# 🌐 **Web Scraping Tool (DuckDuckGo Search)**
-# ───────────────────────────────────────────
-
-print("----------------🌐 Web Scraping Tool ----------------\n")
-
-# Example 2: **Web Scraping Tool** 🌐
-# - Using DuckDuckGo to fetch real-time search results.
-
-search = DuckDuckGoSearchResults()
-
-# Running a search query to fetch recent tech news
-search_results = search.run("latest AI advancements")
-print(f"Search Results: {search_results}  # Displaying first 3 results\n")
-
-print("----------------🌐 Web Scraping Tool ----------------\n")
-
-
-
-
-
-
 # ───────────────────────────────────────────
 # 🧠 **Memory - Conversation Buffer**
 # ───────────────────────────────────────────
@@ -83,6 +57,7 @@ response2 = conversation.run("Machine Learning")
 
 # Printing stored memory
 print("Conversation Memory:", memory.load_memory_variables({}), "\n")
+# View in any JSON formatter
 
 print("----------------🧠 Memory - Conversation Buffer ----------------\n")
 

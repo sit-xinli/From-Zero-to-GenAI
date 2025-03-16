@@ -10,7 +10,7 @@ from langchain.agents import initialize_agent, Tool
 # 🚀 **Initializing LLM & Embeddings**
 # ───────────────────────────────────────────
 
-# 🧠 **Initialize OpenAI Chat Model** 
+# 🧠 **Initialize OpenAI Chat Model**
 # - Used for generating text-based responses.
 # - `temperature=0.7` makes responses slightly creative.
 llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
@@ -20,38 +20,6 @@ llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
 embeddings = OpenAIEmbeddings()
 
 print("\n\n----------------- START -----------------\n")
-
-
-
-
-
-
-
-# ───────────────────────────────────────────
-# 🤖🔧 **Agent with Multiple Tools**
-# ───────────────────────────────────────────
-
-print("\n\n------ 🤖🔧 **Agent with Multiple Tools** ------")
-
-# Example 1: **Agent with Multiple Tools** 🔎🤖
-# - Agents are AI-driven assistants that can use tools.
-# - Here, we initialize an agent with a search tool.
-
-tools = [
-    Tool(name="search", func=lambda query: query, description="Searches for information"),
-]
-
-# Creating the agent with tool support
-agent = initialize_agent(tools, llm, agent_type="zero-shot-react-description", verbose=True)
-
-# Querying the agent
-agent_response = agent.run("What is the capital of France?")
-print(f"Agent Response: {agent_response}\n")
-
-print("------ 🤖🔧 **Agent with Multiple Tools** ------\n")
-
-
-
 
 
 
@@ -134,35 +102,6 @@ execution_response = process_data(data)
 print(f"Execution Response: {execution_response}\n")
 
 print("------ ⚙️ **Execution & Custom Logic** ------\n")
-
-
-
-
-
-
-# ───────────────────────────────────────────
-# 🧠⚖️ **Conditional Logic for Different Actions**
-# ───────────────────────────────────────────
-
-print("\n\n------ 🧠⚖️ **Conditional Logic for Different Actions** ------")
-
-# Example 5: **Conditional Logic for Document Processing** 🧠⚖️
-# - If a document is too short, it returns an alert.
-# - Otherwise, it confirms the document is long enough.
-
-def check_document_length(document):
-    """Determines if a document is sufficiently long."""
-    if len(document.split()) < 50:
-        return "Document is too short."
-    return "Document is long enough."
-
-doc_check = check_document_length(document_text)
-
-print(f"Document Length Check: {doc_check}\n")
-
-print("------ 🧠⚖️ **Conditional Logic for Different Actions** ------\n")
-
-
 
 
 
