@@ -106,7 +106,10 @@ while True:
     user_input = input("You: ")
     if user_input.lower() in ["exit", "quit"]:
         break
-
+    if user_input.lower() in ["recall", "memory", "history"]:
+        for message in state["messages"]:
+            print(f"{message.__class__.__name__}: {message.content}")
+        break
     state["messages"].append(HumanMessage(content=user_input))
     response = app.invoke(state)
     state["messages"].extend(response["messages"])

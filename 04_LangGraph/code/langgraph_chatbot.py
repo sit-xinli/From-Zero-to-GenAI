@@ -86,3 +86,11 @@ if user_input:
     st.session_state.chat_history.extend(response["messages"])
 
     st.write(f"AI: {response['messages'][-1].content}")
+
+
+# Testing
+
+# Q1. How is the weather today in Bnagalore?
+# Q2. What is the latest news on AI?
+# Q3. What is 233 * 444
+# Q4. What is General AI?
