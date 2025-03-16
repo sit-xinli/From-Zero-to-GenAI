@@ -14,7 +14,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 documents = [
     "The capital of France is Paris.",
     "The Eiffel Tower is in Paris.",
-    "Python is widely used for AI development.",
+    "Python is widely used for ML development.",
     "The Great Wall of China is a famous landmark."
 ]
 

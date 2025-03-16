@@ -33,11 +33,12 @@ retriever = vector_db.as_retriever()
 qa_chain = RetrievalQA.from_chain_type(llm=ChatOpenAI(model_name="gpt-3.5-turbo"), retriever=retriever)
 
 print("\n🚀 AI Chatbot with RAG! Type 'exit' to quit.\n")
-# Chat loop
+# Enter an infinite loop to interact with the user
 while True:
     user_input = input("You: ")
     if user_input.lower() in ["exit", "quit"]:
         break
+    # Process the user's input through the RetrievalQA chain to generate a response
     response = qa_chain.run(user_input)
     print(f"AI: {response}\n")
 

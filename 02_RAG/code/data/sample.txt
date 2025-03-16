@@ -1,0 +1,4 @@
+The capital of France is Paris.
+The Eiffel Tower is in Paris.
+Python is widely used for AI development.
+The Great Wall of China is a famous landmark

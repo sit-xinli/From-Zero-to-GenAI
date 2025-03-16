@@ -31,6 +31,7 @@ from langchain.chat_models import ChatOpenAI
 import openai
 import os
 ```
+
 - `OpenAIEmbeddings`: Converts text into vector embeddings.
 - `FAISS`: A lightweight and efficient vector store.
 - `CharacterTextSplitter`: Splits documents into smaller chunks for better retrieval.
@@ -44,6 +45,7 @@ import os
 ```python
 openai.api_key = os.getenv("OPENAI_API_KEY")
 ```
+
 - Retrieves the OpenAI API key securely from environment variables.
 
 ### 📌 Creating a Sample Knowledge Base
@@ -56,6 +58,7 @@ documents = [
     "The Great Wall of China is a famous landmark."
 ]
 ```
+
 - A list of facts to act as our chatbot’s knowledge base.
 
 ### 📌 Converting Text into Vector Embeddings
@@ -66,6 +69,7 @@ split_docs = text_splitter.create_documents(documents)
 embeddings = OpenAIEmbeddings()
 vector_db = FAISS.from_documents(split_docs, embeddings)
 ```
+
 - Splits text into smaller chunks.
 - Converts text into numerical representations (embeddings).
 - Stores embeddings in a FAISS vector database.
@@ -76,6 +80,7 @@ vector_db = FAISS.from_documents(split_docs, embeddings)
 retriever = vector_db.as_retriever()
 qa_chain = RetrievalQA.from_chain_type(llm=ChatOpenAI(model_name="gpt-3.5-turbo"), retriever=retriever)
 ```
+
 - Converts the FAISS database into a retriever.
 - Uses `RetrievalQA` to integrate retrieval and language generation.
 
@@ -90,6 +95,7 @@ while True:
     response = qa_chain.run(user_input)
     print(f"AI: {response}\n")
 ```
+
 - Runs an interactive chatbot session.
 - Retrieves relevant facts before generating responses.
 - Exits when the user types `exit` or `quit`.
@@ -101,23 +107,46 @@ while True:
 `You`: Python is great for? <br />
 `AI`: Python is great for AI development.
 
-
 `You`: The Great Wall of China is ?<br />
 `AI`: The Great Wall of China is a famous landmark.
 
 `You`: That country has what other landmark ?<br />
 `AI`: I don't know, could you please provide more information or specify which country you are referring to?
 
-
 ### Demo
+
 <a href="https://huggingface.co/spaces/Ganesh-Kunnamkumarath/RAG-Chatbot-Basics" target="_blank"> Demo link </a><br />
 Note: API key would have updated.
 
 ## 3. Mini-Exercise & Practical Deployment
 
 ### 🔹 Exercise:
+
 1. Add more facts to the knowledge base and test if the chatbot retrieves the right information.
 2. Modify the chatbot to use a different embedding model and observe the impact on responses.
 
 ### 🚀 Deployment:
+
 To make this chatbot accessible online, we will deploy it on Hugging Face Spaces. Stay tuned for the next steps!
+
+### Key items
+
+# Instantiate a CharacterTextSplitter with a chunk size of 100 characters and an overlap of 20 characters between chunks
+
+# Split the input documents into smaller chunks using the text splitter
+
+# Initialize the OpenAI embeddings to transform text into vector representations
+
+# Build a vector database (using FAISS) from the document chunks and their embeddings
+
+text_splitter = CharacterTextSplitter(chunk_size=100, chunk_overlap=20)
+split_docs = text_splitter.create_documents(documents)
+embeddings = OpenAIEmbeddings()
+vector_db = FAISS.from_documents(split_docs, embeddings)
+
+# Create a retriever from the vector database for efficiently fetching relevant documents
+
+# Create a RetrievalQA chain using ChatOpenAI with the specified model and the retriever for RAG-based chatbot functionality
+
+retriever = vector_db.as_retriever()
+qa_chain = RetrievalQA.from_chain_type(llm=ChatOpenAI(model_name="gpt-3.5-turbo"), retriever=retriever)
