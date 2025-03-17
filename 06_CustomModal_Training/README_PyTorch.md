@@ -107,6 +107,12 @@ After training, we load the saved model and evaluate its performance on unseen d
 3. Make predictions and calculate accuracy.
 4. Display sample predictions.
 
+### Demo
+
+<a href="https://huggingface.co/spaces/Ganesh-Kunnamkumarath/simple-PyTorch-Handwritten-Digits-Reading" target="_blank">
+Demo on Hugging Face Space
+</a><br /><br />
+
 ### Code: `PyTorch-Testing.py`
 
 ```python
