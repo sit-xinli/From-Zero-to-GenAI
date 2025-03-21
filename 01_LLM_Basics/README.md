@@ -2,11 +2,11 @@
 
 ## 1. Concept Explanation
 
-### 📖 For a 10-year-old
+### 📖 For a 25-year-old :) 
 
 Imagine you have a magic book that knows everything! You ask it a question, and it gives you an answer. This magic book is like an AI chatbot. We use a special key (API key) to talk to it, and it responds based on what it has learned. The chatbot understands our words and gives helpful answers, just like a very smart friend!
 
-### 📖 For a 25-year-old
+### 📖 For a 10-year-old :) :) 
 
 Large Language Models (LLMs) are AI systems trained on vast amounts of text data to understand and generate human-like responses. OpenAI’s API provides access to models like GPT-4o-mini, allowing developers to create AI-powered applications. In this exercise, we build a simple chatbot using Python and OpenAI’s API, where user inputs get processed by the model to generate intelligent responses.
 
