@@ -131,13 +131,13 @@ To make this chatbot accessible online, we will deploy it on Hugging Face Spaces
 
 ### Key items
 
-# Instantiate a CharacterTextSplitter with a chunk size of 100 characters and an overlap of 20 characters between chunks
+Instantiate a CharacterTextSplitter with a chunk size of 100 characters and an overlap of 20 characters between chunks
 
-# Split the input documents into smaller chunks using the text splitter
+Split the input documents into smaller chunks using the text splitter
 
-# Initialize the OpenAI embeddings to transform text into vector representations
+Initialize the OpenAI embeddings to transform text into vector representations
 
-# Build a vector database (using FAISS) from the document chunks and their embeddings
+Build a vector database (using FAISS) from the document chunks and their embeddings
 
 text_splitter = CharacterTextSplitter(chunk_size=100, chunk_overlap=20)
 split_docs = text_splitter.create_documents(documents)
