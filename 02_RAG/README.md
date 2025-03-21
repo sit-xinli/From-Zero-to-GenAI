@@ -2,13 +2,13 @@
 
 ## 1. Concept Explanation
 
-### 📚 For a 10-year-old
+### 📚 For a 25-year-old
 
 Imagine you have a robot friend who is very smart but doesn’t remember everything. However, your robot friend has a magic book. Whenever you ask a question, the robot first looks into the magic book for information and then answers you! This way, the robot always gives better answers.
 
 This is how RAG (Retrieval-Augmented Generation) works! The chatbot first searches for relevant knowledge before answering your question, making it smarter.
 
-### 📚 For a 25-year-old
+### 📚 For a 10-year-old
 
 Retrieval-Augmented Generation (RAG) combines information retrieval with generative AI. Instead of relying solely on pre-trained knowledge, an RAG-based chatbot first searches a database (vector store) for relevant information and then generates a response based on the retrieved data. This makes it ideal for answering domain-specific or up-to-date questions.
 
