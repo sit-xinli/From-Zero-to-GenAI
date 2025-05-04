@@ -1,2 +1,6 @@
 /.git
 MNIST/
+mlenv/
+venv/
+my_env/
+PPT/
